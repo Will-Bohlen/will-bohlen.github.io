@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<script src="/assets/js/index.js"></script>
+
 <header>
 {% if site.theme_config.show_navbar == true %}
   {% include horizontal_list.html collection=site.data.home.navbar_entries %}
@@ -13,26 +15,41 @@ layout: default
 
 {{ content }}
 
-{% if site.theme_config.show_projects == true %}
-  <h2>Music</h2>
-  {% include card_list.html collection=site.data.music.project_entries %}
-{% endif %}
+<h2>Selected Works</h2>
+{% include card_list.html collection=site.data.music.project_entries %}
 
-{% if site.theme_config.show_misc_list == true %}
-  <h2>{{ site.theme_config.home.title_misc_list }}</h2>
-  {% include vertical_list.html collection=site.data.music.misc_entries %}
-{% endif %}
+<h2 id="pathways">Pathways for Accompanied Navigator (2022)</h2>
+<p>
+    I love flowcharts. I find them an elegant way to visualize choices and processes, and there's
+    just something satisfying about exploring their branches. Pathways for Accompanied Navigator is
+    my attempt at turning a flowchart into music, via the medium of graphic score. The score is a little
+    absurd or even sarcastic at points, deconstructing the symbols of sheet music into what they truly
+    are: shapes on a page. It's effectively a form of guided improvisation, where performers have to
+    interpret what they see as the navigator charts a path. Each performance follows a different route,
 
-{% if site.theme_config.show_blog == true %}
-  <h2>{{ site.theme_config.home.title_blog }}</h2>
-  {% include post_list.html %}
-{% endif %}
+    providing a unique experience each time. In a sense, Pathways isn't just one song, it's a song-
+    generating algorithm, or perhaps even a musical game.
+</p>
 
-{% if site.theme_config.show_old_projects == true %}
-  <h2>{{ site.theme_config.home.title_old_projects }}</h2>
-  {% include card_list.html collection=site.data.home.old_project_entries %}
-{% endif %}
+<button type="button" class="collapsible">Pathways Recording</button>
+<div class="content">
+    <iframe width="100%" style="aspect-ratio: 16/9;" src="https://www.youtube.com/embed/Zmui__aERP8"></iframe>
+</div>
 
+<h2 id="havenspace">havenspace (2023)</h2>
+<p>
+    I've always had an interest in exploring the format of 'performance'. My background is in
+    electronic music, where performance doesn't really exist: the computer just produces a finished
+    audio file. As such, I've always had the lingering question, “what can I do in a performance that I
+    can't do with a recording?” I've come up with several answers, and Havenspace is one of them.
+    It's fixed media but includes an interactive element that allows the audience to impact the
+    listening experience in a way wholly unique to that performance. To be honest, I'm not exactly
+    sure why I fixated on the name 'havenspace', but I feel that it represents a place between places,
+    where moments converge in a fuzzy kaleidoscope of sound. This piece was originally presented with a 
+    big red button, which audience members could walk up and press. However, it works just as well with 
+    a keyboard or mouse.
+</p>
+<a href="https://will-bohlen.github.io/havenspace">Click here to access havenspace.</a>
 
 {% if site.theme_config.show_footer == true %}
   <footer>

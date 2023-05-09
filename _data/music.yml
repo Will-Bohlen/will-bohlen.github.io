@@ -9,7 +9,10 @@ navbar_entries:
     url: honors
 
 project_entries:
-  - title: Work In Progress
-    url: music
-    desc: This page is not yet complete. Scores and recordings soon to follow.
+  - title: Pathways (2022)
+    url: "#pathways"
+    desc: A graphic score piece based on a large flowchart.
 
+  - title: havenspace (2023)
+    url: "#havenspace"
+    desc: A fixed media piece with interactive elements.

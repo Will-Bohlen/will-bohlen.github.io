@@ -37,6 +37,10 @@ project_entries:
     url: "#service"
     desc: My work with the Tiffin-Seneca Economic Partnership
 
-  - title: Capstone Research Project
+  - title: Senior Honors Project
     url: "#capstone"
     desc: "'The Tower Museum of Arcane Magic': a virtual museum within a fantasy world"
+
+  - title: Senior Honors Reflection
+    url: "#reflection"
+    desc: "A reflection on my time in the Heidelberg Honors Program"
