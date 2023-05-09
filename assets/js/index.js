@@ -8,9 +8,9 @@ window.addEventListener("load", function() {
       var content = this.nextElementSibling;
       if (content.style.maxHeight){
         content.style.maxHeight = null;
-        this.textContent = this.textContent.replace("Collapse", "Expand");
+        this.textContent = this.innerHTML.replace("Collapse", "Expand");
       } else {
-        this.textContent = this.textContent.replace("Expand", "Collapse");
+        this.textContent = this.innerHTML.replace("Expand", "Collapse");
         content.style.maxHeight = content.scrollHeight + "px";
       }
     });

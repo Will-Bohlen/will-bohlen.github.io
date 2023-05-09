@@ -230,7 +230,7 @@ p code, li code {
 
 .pdfpage {
   width: 100%;
-  height: 920px;
+  aspect-ratio: 8.5/11;
 }
 
 /* Style the button that is used to open and close the collapsible content */
@@ -261,6 +261,7 @@ p code, li code {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease-out;
+  position: relative;
 }
 
 .return {
