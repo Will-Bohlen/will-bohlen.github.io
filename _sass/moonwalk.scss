@@ -262,3 +262,15 @@ p code, li code {
   overflow: hidden;
   transition: max-height 0.4s ease-out;
 }
+
+.return {
+    font-size: 0.8em;
+    margin: 8em auto -4em auto;
+    text-align: center;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+    a:hover {
+      color: var(--links);
+    }
+  }

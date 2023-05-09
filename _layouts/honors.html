@@ -2,42 +2,301 @@
 layout: default
 ---
 
+<script src="/assets/js/index.js"></script>
+
 <header>
     {% if site.theme_config.show_navbar == true %}
       {% include horizontal_list.html collection=site.data.home.navbar_entries %}
       <div class="dashed"></div>
     {% endif %}
     
-      <h1>Honors Portfolio</h1>
+      <h1 id="top">Honors Portfolio</h1>
     </header>
     
     {{ content }}
+
+    <h2>Honors Curriculum</h2>
+    {% include card_list.html collection=site.data.honors.project_entries %}
+
+    <h2 id="intro">Intro to Life of the Mind</h2>
+    <p>
+        All Honors students take Intro to Life of the Mind their first semester. The course introduces the goals and expectations of the
+        Honors program, and goes over a few readings and projects. This is the simplest course of the Honors curriculum,
+        but lays an important framework for the rest of the seminars.
+    </p><p>
+        The essay below is from the end of the course, when we were tasked with writing an impromptu essay on our goals 
+        and plans for the rest of our college experience. Looking back, I'm pretty satisfied with how I met those goals. 
+    </p>
     
-    {% if site.theme_config.show_projects == true %}
-      <h2>{{ site.theme_config.home.title_projects }}</h2>
-      {% include card_list.html collection=site.data.home.project_entries %}
-    {% endif %}
-    
-    {% if site.theme_config.show_misc_list == true %}
-      <h2>{{ site.theme_config.home.title_misc_list }}</h2>
-      {% include vertical_list.html collection=site.data.home.misc_entries %}
-    {% endif %}
-    
-    {% if site.theme_config.show_blog == true %}
-      <h2>{{ site.theme_config.home.title_blog }}</h2>
-      {% include post_list.html %}
-    {% endif %}
-    
-    {% if site.theme_config.show_old_projects == true %}
-      <h2>{{ site.theme_config.home.title_old_projects }}</h2>
-      {% include card_list.html collection=site.data.home.old_project_entries %}
-    {% endif %}
-    
-    
+    <button type="button" class="collapsible">Impromptu Essay</button>
+    <div class="content">
+      <object data="/assets/pdf/honors/impromptu_essay.pdf" class="pdfpage" type="application/pdf" width="100%" height="800px"> 
+        <p>It appears you don't have a PDF plugin for this browser.
+          You can <a href="/assets/pdf/honors/impromptu_essay.pdf">click here to
+        download the PDF file.</a></p>  
+      </object>
+    </div>
+
+    <a href="#top" class="return">Return to top</a>
+
+
+    <h2 id="support">Support Courses</h2>
+    <p>
+        As part of my portfolio, I am including reflections of non-Honors courses from each academic year. The prompt for each
+        is to provide examples of how I've developed and pursued independent and interdisciplinary exploration, or how I was 
+        able to better understand the value of interdisciplinary thinking.
+    </p>
+
+    <button type="button" class="collapsible">2019-2020</button>
+    <div class="content">
+        <h4>Concert Choir</h4>
+        <p>
+            I chose to join the Heidelberg Concert Choir when I started at Heidelberg. I didn't have any sort of vocal background, and had never performed 
+            in a large ensemble before. At first it was definitely out of my comfort zone, but I was quickly able to find my footing. Choir ended up being a 
+            lot of fun, and it was really valuable to have some experience with a different type of musical performance. I remained in choir for all four years 
+            of college, and feel much more confident in my vocal abilities because of it. 
+        </p>
+        <h4>She Kills Monsters</h4>
+        <p>
+            In the spring of 2020, I had the opportunity to compose an original score for Heidelberg's production of the play <i>She Kills Monsters</i> 
+            by Qui Nguyen. It was challenging, but ended up being a lot of fun. It was my first time writing incidental music, with the added complication 
+            of having to coordinate my music with the performers on stage. It forced me to compose in a way that I hadn't before, and I'm very proud of 
+            what I was able to write. If you'd like to listen to the score, you can do so <a href="https://squiddotmid.bandcamp.com/album/she-kills-monsters">here.</a>
+        </p>
+    </div>
+    <br>
+
+    <button type="button" class="collapsible">2020-2021</button>
+    <div class="content">
+        <h4>Teaching & Performing with Technology</h4>
+        <p>
+            Fall 2020 was marked by a plethora of online classes, as we felt the full effect of COVID. We were able to be on campus, but nearly all of 
+            my classes were solely virtual. One of these classes was Teaching & Performing with Technology, a class about how technology can be used in 
+            music. My musical background is in electronic music, so most of the course material came very easily to me. However, part of the course involved
+            talking about technology's role in music education, which was an area I was much less familiar with. Even if it was a light introduction to 
+            education, it gave me a lot of respect for my peers in music education, and the effort that goes into teaching.
+        </p>
+        <h4>Visual Communication</h4>
+        <p>
+            I took Visual Communication in spring 2021 as part of my video game production minor. The class gave an overview of graphic design and how it 
+            has developed over time. I entered with some casual experience with graphic design, just from what I've been able to teach myself over the years.
+            I ended up learning a lot from the class, especially regarding different genres of art, the fundamentals of color theory, and how these concepts
+            also apply to films and video games. As the vast majority of my classes tend to be either music or computer science related, it was fun to take a 
+            step into a different discipline.
+        </p>
+    </div>
+    <br>
+
+    <button type="button" class="collapsible">2021-2022</button>
+    <div class="content">
+        <h4>Data Communication and Networking</h4>
+        <p>
+            Within computer science, my focal area has always been software development. However, as part of my degree I was able to get some exposure to 
+            other areas within the field. In fall 2021, I got to explore the world of networking. Going in I understood how to use and configure the internet 
+            from a programming prespective, but the class taught me how networks function on a mechanical level. It helped a lot to demystify how the internet 
+            actually works, and I now feel a lot more confident in writing code that utilizes online functionality. 
+        </p>
+        <h4>Ethics</h4>
+        <p>
+            Ethics is a bit of an outlier on the computer science curriculum, being one of the only courses outside of the computer science department. 
+            That said, it was a very interesting course to take, and one that I feel like could be appropriate for any major. The course made me think about 
+            my personal worldview, and my stance on various ethical dicussions, and I feel like it was a course that truly made me grow as a person. Depending 
+            on what sort of projects I work on, there could very well be times in my career where I have to make ethically challenging decisions, but having 
+            some experience with the topic makes me feel confident that I would be able to make ethical choices.
+        </p>
+    </div>
+    <br>
+
+    <button type="button" class="collapsible">2022-2023</button>
+    <div class="content">
+        <h4>Creative Writing</h4>
+        <p>
+            I ended up having some extra room in my schedule for my final semester, so I decided to take creative writing just for fun. It's an
+            area I've had passing interest in, but never fully explored. Long story short, the class ended up being one of my favorites at Heidelberg. I observed
+            that creative writing and music composition are remarkably similar, and I noticed many parallels between the two areas. In the future, I plan to 
+            directly combine the two by writing a poem and using it as lyrics for a piece. 
+        </p>
+        <h4>Senior Recital</h4>
+        <p>
+            In spring of 2023, I wrote two pieces that combine music with technology, both of which premiered on my senior recital. The first is called 
+            'havenspace', which is an interactive piece that involves a website and a big red button, both of which I had to make and program myself. 
+            The second is 'GLYPH', a music installation that uses augmented reality technology to turn the audience's phones into instruments. Getting the 
+            opportunity to intersect my two majors was very exciting, and I'm very pleased with how both pieces turned out! I am looking forward to finding 
+            more opportunities to combine my areas of interest in the future.
+        </p>
+    </div>
+
+    <a href="#top" class="return">Return to top</a>
+
+
+
+    <h2 id="scholar">Scholar Seminar: Empires</h2>
+    <p>
+        I've always thought that learning about history is interesting, but I'm not very good at remembering all of the names, 
+        places, or dates. Fortunately for me, the seminar on Empires focused more on the common factors of empires throughout
+        history, and what actually defines an empire. It was a lot easier for me to engage with this broader view of history,
+        even when we were studying empires individually. The course was rather distant from my typical area of interest, but 
+        I feel like I was able to learn a lot from it. 
+    </p><p>
+        When Dr. O'Reilly teaches an Honors seminar, there are only three assignments: two papers on subject material from the 
+        class, and a semester project of our choice. For my project, I took what I learned from the course and applied it to 
+        fantasy worldbuilding, writing a thousand years worth of history for a fictional empire. I took inspiration from the actual
+        empires that we studied in class, and theorized how an empire might be affected by the presence of magic, deities, and other
+        supernatural forces.
+    </p>
+
+    <button type="button" class="collapsible">The Empire of Delbryn</button>
+        <div class="content">
+        <object data="/assets/pdf/honors/delbryn.pdf" class="pdfpage" type="application/pdf" width="100%" height="800px"> 
+            <p>It appears you don't have a PDF plugin for this browser.
+            You can <a href="/assets/pdf/honors/delbryn.pdf">click here to
+            download the PDF file.</a></p>  
+        </object>
+    </div>
+
+    <a href="#top" class="return">Return to top</a>
+
+
+
+    <h2 id="scientist">Scientist Seminar: Plagues in History</h2>
+    <p>
+        It was rather fitting to take a class on plagues during an international pandemic. I took this course in the fall semester
+        of 2021, at a time when we still had to wear masks and socially distant, and some classes (like this one) were still online.
+        We talked about all sorts of different plagues from throughout the course of history, and were constantly talking about how
+        they were similar or different from COVID-19. By the end of the semester, we had a complete narrative of how microbes developed
+        alongside humanity, and how each shaped the other.
+    </p><p>
+        The final project of the course was the 'Reader's Choice Report': during the semester, we each picked a book from a list provided
+        by Dr. Pruneski, each one focusing on a certain microbe or disease. At the end of the semester, we wrote a paper and gave a presentation
+        for the class. I chose the book "The Rise of Yeast" by Nicholas P. Money, one of the only non-infectious microbes featured on the list.
+        I found it fascinating, and was excited to learn about a microbe that benefits humanity instead of hindering it. Due to that project, 
+        yeast became my favorite microbe: it's incredible just how much it helps us, even beyond culinary uses.
+    </p>
+
+    <button type="button" class="collapsible">Reader's Choice Report: The Rise of Yeast</button>
+    <div class="content">
+        <object data="/assets/pdf/honors/yeast.pdf" class="pdfpage" type="application/pdf" width="100%" height="800px"> 
+            <p>It appears you don't have a PDF plugin for this browser.
+            You can <a href="/assets/pdf/honors/yeast.pdf">click here to
+            download the PDF file.</a></p>  
+        </object>
+    </div>
+
+    <a href="#top" class="return">Return to top</a>
+
+
+
+    <h2 id="artist">Artist Seminar: The Films of Stanley Kubrick</h2>
+    <p>
+        Dr. Doug McConnell was my composition professor for my first two years at Heidelberg, before his retirement in 2021. As such, I 
+        worked very close to him during that time, and getting the chance to take an Honors seminar from him was very exciting. Dr. McConnell 
+        also happens to be a Kubrick aficionado, and in the seminar we watched every film from the director. I've always had a passing love 
+        for cinematography, and I greatly enjoyed discussing the films with my classmates. We also focused on Kubrick's style, and how it
+        manifests itself no matter what genre he was directing. The class was a lot of fun, and is easily one of my favorite classes from my
+        time at Heidelberg.
+    </p><p>
+        Our final project for the class was a research essay on one of the films. I chose to analyze the special effects of <i>2001: A Space Odyssey.</i> 
+        Although not quite my favorite Kubrick film (which would be <i>Dr. Strangelove</i>), I have a lot of love for <i>2001</i> and its 
+        incredible impact on the science fiction genre. Even beyond that genre, its special effects were revolutionary for the time, and paved 
+        the way for later films like <i>Star Wars.</i> For my essay I researched how the special effects were done, and discussed the greater 
+        impact the film had on the industry.
+    </p>
+
+    <button type="button" class="collapsible">Constructing an Odyssey</button>
+    <div class="content">
+        <object data="/assets/pdf/honors/kubrick.pdf" class="pdfpage" type="application/pdf" width="100%" height="800px"> 
+            <p>It appears you don't have a PDF plugin for this browser.
+            You can <a href="/assets/pdf/honors/kubrick.pdf">click here to
+            download the PDF file.</a></p>  
+        </object>
+    </div>
+
+    <a href="#top" class="return">Return to top</a>
+
+
+
+
+    <h2 id="citizen">Citizen Seminar: Autocracy vs. Democracy</h2>
+    <p>
+        I've been told all throughout my life that democracy is a good thing, without nearly as much explanation as to why it's actually good. 
+        This seminar dived into that question, analyzing both extremes to find the strengths and weaknesses of each. We discussed 
+        how autocracies and democracies formed through history, as well as analyzing more topical events such as the Russo-Ukranian War 
+        or potentially autocratic tendencies within the American government. To be clear, I am still firmly on the side of democracy, but I 
+        now have a much better understanding of why it's a good thing, and how to prevent it from succumbing to autocracy. 
+    </p><p>
+        The structure of assignments was the same as the Scholar Seminar, with two papers and a semester project. With Dr. O'Reilly's permission,
+        I combined my two papers into a single extended essay on how political themes manifest in <i>The Lego Movie.</i> I wrote about how the 
+        setting is portrayed as autocratic, and how the heroes are portrayed with democratic subtext. I don't think that the movie with written 
+        with political themes in mind, but instead it reflects more broadly on the common trope of autocracy being associated with evil, and democracy 
+        with good. Not saying I disagree with that, but I think it's interesting to notice and analyze it. 
+    </p>
+
+    <button type="button" class="collapsible">Everything is Autocratic: The Hidden Dystopia of <i>The Lego Movie</i></button>
+    <div class="content">
+        <object data="/assets/pdf/honors/lego.pdf" class="pdfpage" type="application/pdf" width="100%" height="800px"> 
+            <p>It appears you don't have a PDF plugin for this browser.
+            You can <a href="/assets/pdf/honors/lego.pdf">click here to
+            download the PDF file.</a></p>  
+        </object>
+    </div>
+
+    <a href="#top" class="return">Return to top</a>
+
+
+
+
+    <h2 id="service">Service Learning</h2>
+    <p>
+        My service learning experience consisted of working with the Tiffin Seneca Economic Partnership to set up a time
+        tracking system for their volunteers. The schedule for getting the work done ended up being rather tight, but I'm 
+        still happy with how things turned out. For more information on the project, you can read the impromptu essay I wrote
+        about the experience.
+    </p>
+
+    <button type="button" class="collapsible">Impromptu Essay</button>
+    <div class="content">
+        <object data="/assets/pdf/honors/service.pdf" class="pdfpage" type="application/pdf" width="100%" height="800px"> 
+            <p>It appears you don't have a PDF plugin for this browser.
+            You can <a href="/assets/pdf/honors/service.pdf">click here to
+            download the PDF file.</a></p>  
+        </object>
+    </div>
+
+    <p>
+        Additionally, as part of the course I kept a service learning journal as the semester went on. I've selected a few 
+        entries to include below, for some more insight into my service learning experience.
+    </p>
+    <button type="button" class="collapsible">Service Learning Journal</button>
+    <div class="content">
+        <object data="/assets/pdf/honors/journal.pdf" class="pdfpage" type="application/pdf" width="100%" height="800px"> 
+            <p>It appears you don't have a PDF plugin for this browser.
+            You can <a href="/assets/pdf/honors/journal.pdf">click here to
+            download the PDF file.</a></p>  
+        </object>
+    </div>
+
+    <a href="#top" class="return">Return to top</a>
+
+
+
+
+    <h2 id="capstone">Capstone Research Project</h2>
+
+    <button type="button" class="collapsible">Placeholder</button>
+    <div class="content">
+    <object data="/assets/pdf/code_of_ethics.pdf" class="pdfpage" type="application/pdf" width="100%" height="800px"> 
+        <p>It appears you don't have a PDF plugin for this browser.
+        You can <a href="/assets/pdf/code_of_ethics.pdf">click here to
+        download the PDF file.</a></p>  
+    </object>
+    </div>
+
+    <a href="#top" class="return">Return to top</a>
+
     {% if site.theme_config.show_footer == true %}
       <footer>
         <div class="dashed"></div>
-        {% include horizontal_list.html collection=site.data.home.footer_entries %}
+        {% include horizontal_list.html collection=site.data.honors.footer_entries %}
       </footer>
     {% endif %}
     

@@ -3,4 +3,6 @@ layout: honors
 title: Honors Portfolio
 ---
 
-Willow Bohlen's compositions draw inspiration from the many creative fields she applies herself in, which include music production, programming, writing, and game development. She strives to incorporate aspects of each into her work and particularly focuses on how music is experienced. She prides herself on her diverse creative output and enjoys exploring unfamiliar mediums and styles.
+Heidelberg University's Honors program "fosters free and rigorous intellectual inquiry through an emphasis on interdisciplinarity, civic engagement, independent research, and individually-driven academic exploration." The curriculum centers around four areas: 'The Scholar', 'The Scientist', 'The Artist', and 'The Citizen.' Students take seminars in each of these topics, as well as service learning course and a capstone research project.
+
+For more information on the Heidelberg Honors Program, visit their website [here.](https://inside.heidelberg.edu/departments-offices/honors)

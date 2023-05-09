@@ -1,0 +1,42 @@
+navbar_entries:
+  - title: Home
+    url: index
+
+  - title: Music
+    url: music
+
+  - title: Honors
+    url: honors
+
+project_entries:
+  - title: Intro to Life of the Mind
+    url: "#intro"
+    desc: The introductory course to the Honors Program
+
+  - title: Support Courses
+    url: "#support"
+    desc: Reflections from my non-honors curriculum
+
+  - title: Scholar Seminar
+    url: "#scholar"
+    desc: "'Empires', Dr. Marc O'Reilly"
+
+  - title: Scientist Seminar
+    url: "#scientist"
+    desc: "'Plagues in History', Dr. Justin Pruneski"
+
+  - title: Artist Seminar
+    url: "#artist"
+    desc: "'The Films of Stanley Kubrick', Dr. Doug McConnell"
+
+  - title: Citizen Seminar
+    url: "#citizen"
+    desc: "'Autocracy vs. Democracy', Dr. Marc O'Reilly"
+
+  - title: Service Learning Project
+    url: "#service"
+    desc: My work with the Tiffin-Seneca Economic Partnership
+
+  - title: Capstone Research Project
+    url: "#capstone"
+    desc: "'The Tower Museum of Arcane Magic': a virtual museum within a fantasy world"
