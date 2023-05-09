@@ -66,11 +66,12 @@ img {
 html {
     --bg: #FFF;
     --bg-secondary: #f3f4f6;
+    --bg-tertiary: #dadfe9;
     --headings: #1e293b;
     --text: #374151;
     --text-secondary: #6b7280;
     --links: #6366f1;
-    --highlight: #FFECB2; // light yellow
+    --highlight: #e9bd3b; // light yellow
     --code-text: #9D174D;
     --share-text: #999;
 }
@@ -82,6 +83,7 @@ html {
       --highlight: #41C7C7;
       --bg: #1f242A;
       --bg-secondary: #323945;
+      --bg-tertiary: #4a515e;
       --text: #adb5bd;
       --text-secondary: #9CA3AF;
       --code-text: #91A7FF;
@@ -114,6 +116,10 @@ blockquote {
 }
 a {
   color: var(--links);
+  transition: 0.2s;
+}
+a:hover {
+  color: var(--highlight);
 }
 *:target { background-color: var(--bg-secondary); }
 
@@ -212,4 +218,47 @@ p code, li code {
   font-weight: bold;
   text-transform: lowercase;
   //border: 1px solid var(--text-secondary);
+}
+
+.headshot {
+  float: right; 
+  width: 30%; 
+  min-width: 250px;
+  border: 2px var(--text) solid; 
+  margin-top: 2em
+}
+
+.pdfpage {
+  width: 100%;
+  height: 920px;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.collapsible:hover {
+  color: var(--links);
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  background-color: var(--bg-secondary);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
 }

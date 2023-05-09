@@ -14,9 +14,7 @@
           &nbsp;
           •
           &nbsp;
-          {%- endif -%}
-          {%- if site.soopr -%}
-          Powered by <a href="https://www.soopr.co" target="_blank" rel="noreferrer">Soopr</a>
+          wrbohlen@gmail.com 
           &nbsp;
           •
           &nbsp;
@@ -26,12 +24,4 @@
       </div>
     </main>
 
-    {%- if site.soopr -%}
-      {%- if site.soopr.publish_token and jekyll.environment == "production" -%}
-        <script async defer data-soopr-token="{{site.soopr.publish_token}}" src="https://sdk.soopr.co/soopr.js"></script>
-      {%- else -%}
-        <script async defer src="https://sdk.soopr.co/soopr.js"></script>
-      {%- endif -%}
-    {%- endif -%}
-  </body>
 </html>

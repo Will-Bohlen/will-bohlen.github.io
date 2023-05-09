@@ -2,40 +2,49 @@
 layout: default
 ---
 
+<script src="/assets/js/index.js"></script>
+
 <header>
 {% if site.theme_config.show_navbar == true %}
   {% include horizontal_list.html collection=site.data.home.navbar_entries %}
   <div class="dashed"></div>
 {% endif %}
 
+  <img src="/assets/images/headshot.jpeg" alt="Willow Bohlen" class="headshot">
   <h1>{{ site.title }}</h1>
-  {% if site.theme_config.show_description == true %}
-    <p>{{ site.description }}</p>
-  {% endif %}
+  <p>Hello! My name is Willow, and I'm a programmer, composer, and game developer who loves being creative in
+    all sorts of mediums. You can check out some of my work in my portfolios below!</p>
 </header>
 
-{{ content }}
-
 {% if site.theme_config.show_projects == true %}
-  <h2>{{ site.theme_config.home.title_projects }}</h2>
+  <h2 style="clear: both">{{ site.theme_config.home.title_projects }}</h2>
   {% include card_list.html collection=site.data.home.project_entries %}
 {% endif %}
 
-{% if site.theme_config.show_misc_list == true %}
-  <h2>{{ site.theme_config.home.title_misc_list }}</h2>
-  {% include vertical_list.html collection=site.data.home.misc_entries %}
-{% endif %}
+<h2>About Me</h2>
+<p>I am a recent graduate of Heidelberg University, and am preparing to embark on the next stage of my life
+  as I start my career in software development. My resume and code of ethics are posted below if you want to
+  hear more about my background. If you'd like to talk more, feel free to reach out at wrbohlen@gmail.com.
+</p>
+<button type="button" class="collapsible">Resume</button>
+<div class="content">
+  <object data="/assets/pdf/resume.pdf" class="pdfpage" type="application/pdf" width="100%" height="800px"> 
+    <p>It appears you don't have a PDF plugin for this browser.
+      You can <a href="/assets/pdf/resume.pdf">click here to
+    download the PDF file.</a></p>  
+  </object>
+</div>
 
-{% if site.theme_config.show_blog == true %}
-  <h2>{{ site.theme_config.home.title_blog }}</h2>
-  {% include post_list.html %}
-{% endif %}
+<br>
 
-{% if site.theme_config.show_old_projects == true %}
-  <h2>{{ site.theme_config.home.title_old_projects }}</h2>
-  {% include card_list.html collection=site.data.home.old_project_entries %}
-{% endif %}
-
+<button type="button" class="collapsible">Code of Ethics</button>
+<div class="content">
+  <object data="/assets/pdf/code_of_ethics.pdf" class="pdfpage" type="application/pdf" width="100%" height="800px"> 
+    <p>It appears you don't have a PDF plugin for this browser.
+      You can <a href="/assets/pdf/code_of_ethics.pdf">click here to
+    download the PDF file.</a></p>  
+  </object>
+</div>
 
 {% if site.theme_config.show_footer == true %}
   <footer>
@@ -43,3 +52,4 @@ layout: default
     {% include horizontal_list.html collection=site.data.home.footer_entries %}
   </footer>
 {% endif %}
+
