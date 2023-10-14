@@ -1,13 +1,3 @@
-navbar_entries:
-  - title: Home
-    url: index
-
-  - title: Music
-    url: music
-
-  - title: Honors
-    url: honors
-
 project_entries:
   - title: Intro to Life of the Mind
     url: "#intro"

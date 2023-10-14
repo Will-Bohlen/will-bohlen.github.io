@@ -1,14 +1,8 @@
-navbar_entries:
-  - title: Home
-    url: index
- 
-  - title: Music
-    url: music
-
-  - title: Honors
-    url: honors
-
 project_entries:
+  - title: She Kills Monsters (2020)
+    url: "#monsters"
+    desc: An original score for Heidelberg's 2020 production of She Kills Monsters.
+
   - title: Pathways (2022)
     url: "#pathways"
     desc: A graphic score piece based on a large flowchart.

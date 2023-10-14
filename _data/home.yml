@@ -2,6 +2,9 @@ navbar_entries:
   - title: Home
     url: index
 
+  - title: Code
+    url: code
+
   - title: Music
     url: music
 
@@ -9,6 +12,10 @@ navbar_entries:
     url: honors
 
 project_entries:
+  - title: Code and Game Design
+    url: code
+    desc: Past and current coding projects
+
   - title: Music Composition
     url: music
     desc: The music of Willow Bohlen

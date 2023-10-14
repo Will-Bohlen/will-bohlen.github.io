@@ -1,0 +1,17 @@
+project_entries:
+  - title: Fractured
+    url: "#fractured"
+    desc: A puzzle-platformer made for SkillsUSA 2019.
+
+  - title: havenspace
+    url: "#havenspace"
+    desc: A web-based musical piece with interactive elements.
+
+  - title: GLYPH
+    url: "#glyph"
+    desc: An AR-powered music installation that runs on mobile devices.
+
+  - title: The Ballad of Lugh
+    url: "#lugh"
+    desc: > 
+      A platformer game made in 96 hours, which won Jame Gam #32.

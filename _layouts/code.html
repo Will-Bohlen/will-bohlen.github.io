@@ -1,0 +1,146 @@
+---
+layout: default
+---
+
+<script src="/assets/js/index.js"></script>
+
+<header>
+{% if site.theme_config.show_navbar == true %}
+  {% include horizontal_list.html collection=site.data.home.navbar_entries %}
+  <div class="dashed"></div>
+{% endif %}
+
+  <h1>Code and Game Design</h1>
+</header>
+
+{{ content }}
+
+<a href="https://github.com/willow-bohlen" class="biglink" target="_blank" rel="noopener noreferrer">Click here to visit my GitHub page.</a>
+
+
+<h2>Completed Projects</h2>
+{% include card_list.html collection=site.data.code.project_entries %}
+
+<h2 id="fractured">Fractured</h2>
+<p>
+    During my junior and senior years of high school, I was a part of Mayfield's Excel TECC program, 
+    studying Information Technology and Programming. I would be in a classroom for a few hours each 
+    day studying computer science topics, and during my second year of the program I was specifically
+    studying game development with Unity. As part of the course, I was part of a two-person team that 
+    was developing a game for the SkillsUSA 2019 Ohio State conference. The resulting game was called 
+    "Fractured".
+</p>
+<img src="/assets/images/fractured.gif" alt="Fractured screenshot" class="screenshot">
+<p> 
+    The game is a puzzle-platformer developed in Unity, which centers around the core mechanic of 
+    moving pieces of the level around as you go. In the team, I focused on developing the code and 
+    assets for the game, while my teammate worked more on the associated presentation for the conference.
+    We ended up earning second place at the competition! 
+</p>
+
+<a href="https://squiddotmid.itch.io/fractured" class="biglink" target="_blank" rel="noopener noreferrer">Click here to play Fractured on itch.io.</a>
+<br>
+<a href="#top" class="return">Return to top</a>
+
+
+<h2 id="havenspace">havenspace </h2>
+<p>
+    havenspace is an interactive musical piece which runs in a web browser. It consists of a simple 
+    webpage built from HTML and CSS, and a TypeScript-based backend. The song works by loading a series 
+    of MP3 files using Tone.js, and moving through the song using a state machine. At each state, the 
+    code determines how pressing the button affects the music, and at what point to trigger the next
+    state.
+</p>
+<img src="/assets/images/havenspace_button.jpg" alt="Image of havenspace live setup" class="screenshot">
+<p>
+    When I initally debuted the piece, I had a physical button that audience members could press. 
+    The actual button was from <a href="https://www.adafruit.com/product/1185"  target="_blank" rel="noopener noreferrer">Adafruit</a>,
+    and I 3D printed a case to mount it in. Then, I connected the button to an Arduino board, and 
+    sent serial messages to my laptop over USB. An AutoHotKey script caught those messages, and 
+    converted them into spacebar presses, which the website was able to recognize. It was a complicated
+    system, but it ended up working quite well! For more info about the song, visit my Music page
+    
+    <a href="https://willow-bohlen.github.io/music#havenspace">here</a>, or view the source code 
+    <a href="https://github.com/willow-bohlen/havenspace" target="_blank" rel="noopener noreferrer">here</a>.
+
+</p>
+<a href="https://willow-bohlen.github.io/havenspace" class="biglink" target="_blank" rel="noopener noreferrer">Click here to access havenspace.</a>
+<br>
+<a href="#top" class="return">Return to top</a>
+
+
+
+
+<h2 id="glyph">GLYPH </h2>
+<p>
+    Much like with havenspace, I really enjoy combining music with code when I'm able to. GLYPH was 
+    another experiment within that realm, this time with the concept of using the audience's mobile devices
+    to create an interactive music installation. To do this, I created a website that uses augmented reality 
+    to detect when the camera is pointed at one of several markers. When pointing at a marker, the phone will 
+    produce a sound corresponding to that specific marker. Then, once there are many people in a single room
+    looking at different markers, the entire song becomes audible.
+</p>
+<video width="360" height="428" controls alt="Video demonstration of GLYPH" class="screenshot">
+    <source src="/assets/images/glyph_demo.mp4" type="video/mp4">
+    <i>Your browser does not support the video tag.</i>
+</video>
+<p>During development, I split the project into three main systems:</p>
+<ol>
+    <li><b>AR:</b> The AR functionality is handled by the ar.js and three.js libraries. Each of the titular 
+    glyphs are 2D barcodes, which are especially easy to use for AR purposes. Once the site finds a barcode,
+    it notes where it is and renders a few shapes over it as visual feedback.</li>
+    <li><b>Audio:</b> Once a barcode is in view, it's time to produce some sort of sound. This is done using 
+    Tone.js synthesizers and effects. A set of instruments is defined in the code, and a synth is selected 
+    based on which barcode is currently in view.</li>
+    <li><b>Note Generation:</b> Finally, we have to decide which notes the instrument is going to play. 
+    Additionally, it would be ideal for all participants to be playing the same notes, because otherwise 
+    it'll just sound like a random mess. I found the simplest way to do this was with seeded random 
+    functions, using the system clock as the seed. While not infallable, it works in most use cases. Every 
+    32 seconds, the system picks a random key and scale. Then each instrument is updated once per second,
+    where it decides if it's going to play a note, which note it's going to play, and when it'll play it.
+    Using inheritance, I was also able to give each instrument slightly varied behaviors. The result is 
+    that although the song is randomly generated, there is still a recognizable melody and progression 
+    between all of the participants.</li>
+</ol>
+
+<p>
+    If you'd like to look at the source code, you can find it 
+    <a href="https://github.com/willow-bohlen/glyph" target="_blank" rel="noopener noreferrer">here</a>.
+</p>
+<br>
+<a href="#top" class="return">Return to top</a>
+
+
+
+<h2 id="lugh">The Ballad of Lugh</h2>
+<p>
+    The Ballad of Lugh is an action-platformer game developed in 96 hours, and the winner of 
+    <a href="https://itch.io/jam/jame-gam-32 " class="biglink" target="_blank" rel="noopener noreferrer">Jame Gam #32</a>,
+    which had the theme "Folklore and mythology", the special object "Eye", and 31 total entrants.
+    To fit with the theme, I based my game on the Irish mythological characters of Lugh and Balor.
+    I also decided to use an art style inspired by storybooks and caligraphy, as it was both thematic 
+    and quick to produce. Most of my past game development experience has been in Unity, but for this 
+    game I decided to try using Godot 4, an open source game engine.
+</p>
+<video width="768" height="432" controls alt="Video demonstration of The Ballad of Lugh" class="screenshot">
+    <source src="/assets/images/lugh_demo.mp4" type="video/mp4">
+    <i>Your browser does not support the video tag.</i>
+</video>
+<p> 
+    I gave myself the additional challenge of writing as much code from scratch as I possibly could, 
+    not using any pre-existing script assets like level managers or player controllers. It was a lot of 
+    work, but I found that a lot of my skills from Unity transferred over, and I'm very happy with how the 
+    game turned out. 
+</p>
+<a href="https://squiddotmid.itch.io/the-ballad-of-lugh" class="biglink" target="_blank" rel="noopener noreferrer">Click here to play The Ballad of Lugh on itch.io.</a>
+<br>
+<a href="#top" class="return">Return to top</a>
+
+
+
+{% if site.theme_config.show_footer == true %}
+  <footer>
+    <div class="dashed"></div>
+    {% include horizontal_list.html collection=site.data.home.footer_entries %}
+  </footer>
+{% endif %}

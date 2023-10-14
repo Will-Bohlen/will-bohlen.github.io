@@ -9,17 +9,21 @@ layout: default
   {% include horizontal_list.html collection=site.data.home.navbar_entries %}
   <div class="dashed"></div>
 {% endif %}
+</header>
 
-  <h1>{{ site.title }}</h1>
+<div class="bio">
   <img src="/assets/images/headshot.jpeg" alt="Willow Bohlen" class="headshot">
-  <p>Hello! My name is Willow, and I'm a programmer, composer, and game developer from Solon, OH.</p>
-    <p>
+  <div class="biotext">
+    <h1>{{ site.title }}</h1>
+    <p>Hello! My name is Willow, and I'm a programmer, composer, and game developer from Solon, OH.</p>
+      <p>
         My mission is to synthesize ideas from many traditions and disciplines into content 
         that engages and inspires its audience. I want to bring unique ideas to the table in every medium I work in: 
         composition, songwriting, software/game development, writing, and whatever else I attempt. No matter what 
         I'm doing, I want to infuse enthusiastic curiosity, constant experimentation, and thorough theoretical understanding into my work.
-    </p>
-</header>
+      </p>
+  </div>
+</div>
 
 {% if site.theme_config.show_projects == true %}
   <h2 style="clear: both">{{ site.theme_config.home.title_projects }}</h2>
